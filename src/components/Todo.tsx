@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { TodoType, Animate } from "../interfaces/Todo";
+import { TodoType } from "../interfaces/Todo";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../redux";
-const Todo: React.FC<{ delay: number; todo: TodoType; animate?: Animate }> = ({
+const Todo: React.FC<{ delay: number; todo: TodoType}> = ({
   delay,
   todo,
-  animate,
 }) => {
   const dispatch = useDispatch();
   const { deleteTodo } = bindActionCreators(actionCreators, dispatch);
